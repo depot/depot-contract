@@ -15,3 +15,11 @@ indent_style = space
 # Markdown customizations
 [*.md]
 trim_trailing_whitespace = false
+
+[*.js]
+indent_size = 2
+indent_style = space
+
+[composer.json]
+indent_size = 4
+indent_style = space

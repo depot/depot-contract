@@ -1,7 +1,9 @@
 <?php
 
-namespace Monii\AggregateEventStorage\Contract;
+namespace Depot\Testing\Unit\Contract;
 
+use Depot\Contract\Contract;
+use Depot\Contract\SimplePhpFqcnContractResolver;
 use PHPUnit_Framework_TestCase as TestCase;
 
 class SimplePhpFqcnContractResolverTest extends TestCase

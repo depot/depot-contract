@@ -1,6 +1,6 @@
 <?php
 
-namespace Monii\AggregateEventStorage\Contract;
+namespace Depot\Contract;
 
 interface ContractResolver
 {
