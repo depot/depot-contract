@@ -5,20 +5,8 @@
   "homepage": "http://depot.io",
   "authors": [
     {
-      "name": "monii.io",
-      "email": "team@monii.com"
-    },
-    {
       "name": "Beau Simensen",
-      "email": "beau.simensen@monii.com"
-    },
-    {
-      "name": "Steve Marks",
-      "email": "steve.marks@monii.com"
-    },
-    {
-      "name": "Alec Charlton",
-      "email": "alec.charlton@monii.com"
+      "email": "beau@dflydev.com"
     }
   ],
   "autoload": {
@@ -31,8 +19,11 @@
       "Depot\\Testing\\Unit\\Contract\\": "src"
     }
   },
+  "require": {
+    "php": "^7.1"
+  },
   "require-dev": {
-    "phpunit/phpunit": "^4.7",
+    "phpunit/phpunit": "^6.5",
     "squizlabs/php_codesniffer": "^2.3"
   },
   "extra": {
