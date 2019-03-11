@@ -1,8 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Depot\Contract;
 
-class Contract
+final class Contract
 {
     /**
      * @var string
@@ -14,30 +16,23 @@ class Contract
      */
     private $className;
 
-    /**
-     * @param string $contractName
-     * @param string $className
-     */
-    public function __construct($contractName, $className)
+    public function __construct(string $contractName, string $className)
     {
         $this->contractName = $contractName;
         $this->className = $className;
     }
 
-    /**
-     * @return string
-     */
-    public function getContractName()
+    public function getContractName(): string
     {
         return $this->contractName;
     }
 
-    public function getClassName()
+    public function getClassName(): string
     {
         return $this->className;
     }
 
-    public function __toString()
+    public function __toString(): string
     {
         return '['.$this->contractName.']['.$this->className.']';
     }

@@ -1,35 +1,29 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Depot\Contract;
 
-class SimplePhpFqcnContractResolver implements ContractResolver
+final class SimplePhpFqcnContractResolver implements ContractResolver
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function resolveFromContractName($contractName)
+    public function resolveFromContractName($contractName): Contract
     {
         return new Contract($contractName, str_replace('.', '\\', $contractName));
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function resolveFromClassName($className)
+    public function resolveFromClassName($className): Contract
     {
         $className = trim($className, '\\');
 
         return new Contract(str_replace('\\', '.', $className), $className);
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function resolveFromObject($object = null)
+    public function resolveFromObject($object = null): ?Contract
     {
         if (is_null($object)) {
             return null;
         }
+
         return $this->resolveFromClassName(get_class($object));
     }
 }
